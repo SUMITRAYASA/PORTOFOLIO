@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potofolio</title>    
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kenia&family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="src/output.css" rel="stylesheet">
+
+    <!-- Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        khula: ['Khula', 'sans-serif'],
+                        bebas: ['"Bebas Neue"', 'sans-serif'],
+                        kenia: ['"Kenia"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Color -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#00756B',
+                        background: '#FFFFFF',
+                        line: '878787',
+                        surface: '#F4F4F4',
+                        muted: '#EDEDED',
+                        text: '#000000',
+                        secondtext: '#4d4d4d',
+                        thirdtext: '#878787',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+    h1 {
+        font-family: 'Bebas Neue', sans-serif;
+    }
+
+    h3 {
+        font-family: 'Kenia', sans-serif;
+    }
+</style>
+</head>
+
+<body class="font-khula relative">
+
+    <header>
+        <nav id="navbar" class="navbar hidden lg:sticky lg:block bg-background lg:w-full lg:flex px-[120px] py-[20px] lg:items-center lg:justify-between">
+            <div class="navbar-logo flex gap-2 items-center ">
+                <div class="logo-icon text-4xl">
+                    <h3>S</h3>
+                </div>
+                <p class="logo-name font-semibold">
+                    Sumitra
+                </p>
+            </div>
+
+            <div class="navbar-menu flex gap-6 text-base font-semibold">
+                <a href="#hero" class="nav-link"><p>About Me</p></a>
+                <a href="#portfolio" class="nav-link"><p>Project</p></a>
+                <a href="#experience" class="nav-link"><p>Skill & Experience</p></a>
+                <a href="#contact" class="nav-link"><p>Contact</p></a>
+            </div>
+
+            <div class="navbar-action">
+                <a href="kalkulator.html" class="project-button">
+                    <p>Lihat Project Kalkulator</p>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="hero" class="hero-section px-[40px] lg:px-[120px] pt-[40px] pb-[40px] lg-pt-[40px] bg-background">
+
+            <div class="hero-top flex justify-between items-center text-secondtext text-sm">
+
+                <div class="profile-label">
+                    <p class="profile-name tracking-[5%] text-base">Let's</p>
+                    <p class="profile-name tracking-[5%]">Know about me</p>
+                </div>
+
+                <div class="portfolio-label text-xs flex flex-col">
+                    <p class="portfolio-title text-right tracking-[5%]">PORTOFOLIO</p>
+                    <p class="portfolio-year text-right tracking-[5%] text-base">2026</p>
+                </div>
+
+            </div>
+
+            <div class="hero-content flex flex-col-reverse lg:flex-row px-[30px]">
+
+                <div class="hero-introduction flex flex-1 flex-col gap-6 lg:gap-[80px] mt-[70px]">
+
+                    <div class="hero-header flex flex-col gap-3">
+                        <div class="hero-name text-[100px] lg:text-[172px] lg:tracking-[-2%] leading-[80px] lg:leading-[128px] ">
+                            <h1>PUTU</h1>
+                            <h1>SUMITRA</h1>
+                        </div>
+
+                        <div class="hero-role text-primary tracking-[5%]">
+                            UI/UX DESIGNER & CREATIVE THINKER
+                        </div>
+                    </div>
+
+
+
+                    <div class="hero-description w-full lg:w-[65%] text-secondtext tracking-[10%] lg:tracking-[5%] text-base">
+                        Aku seorang pelajar yang terus berkembang melalui proses belajar dan berkarya untuk menciptakan program yang bermanfaat.
+                    </div>
+
+                </div>
+
+                <div class="hero-visual flex-1">
+
+                    <div class="hero-image">
+                        <img src="asset/profil-hero.png" alt="Putu Sumitrayasa">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PORJECT -->
+        <section id="portfolio" class="portfolio-section px-[40px] lg:px-[120px] pt-[80px] bg-surface">
+            <div class="portfolio-container w-full flex flex-col lg:flex-row gap-[80px]">
+
+                <div class="selected-project w-full lg:w-[20%] flex flex-col justify-between">
+                    <div class="project-text flex flex-col gap-6">
+                        <div class="section-title text-2xl font-semibold tracking-[12%]">
+                            <h4>SELECTED<br>PROJECT</h4>
+                        </div>
+
+                        <div class="project-description text-base text-secondtext font-semibold tracking-[2.5%]">
+                            Semua project yang pernah aku buat ada disini, pembuatan website, design, dst
+                        </div>
+                    </div>
+
+                    <a href="#" class="project-link text-primary font-semibold flex items-center gap-3 tracking-[0.02rem]">
+                        <span>Lihat semua project ku</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
+                            <path d="M0 0h24v24H0z" fill="none" />
+                            <path fill="currentColor" d="M13.47 8.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H6.5a.75.75 0 0 1 0-1.5h9.69z" />
+                        </svg>
+
+                    </a>
+                </div>
+
+                <div class="project-list flex-1 flex flex-col lg:flex-row gap-[42px]">
+
+                    <div class="project-card flex-1 flex flex-col">
+                        <div class="project-number flex gap-6">
+                            <div class="number text-2xl font-semibold tracking-[12%]"><h4>01</h4></div>
+
+                            <div class="project-header flex flex-col mt-2">
+                                <div class="project-name text-xl font-semibold tracking-[2%]">Food Cort</div>
+                                <div class="project-category text-base tracking-[1.5%]">Apps Design</div>
+                            </div>
+                        </div>
+                        <div class="line flex items-center gap-4 gap-1 mt-2">
+                            <div class="number text-2xl -line w-[35px] h-[2px] bg-primary"></div>
+                            <div class="name-line flex-1 h-[1.6px] bg-gray-400"></div>
+                        </div>
+                        <div class="project-image w-full aspect-[3/3.8] mt-4 bg-gray-300">
+                            <img src="asset/project/Sampul-lomba.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="project-card flex-1 flex flex-col">
+                        <div class="project-number flex gap-6">
+                            <div class="number text-2xl font-semibold tracking-[12%]"><h4>02</h4></div>
+
+                            <div class="project-header flex flex-col mt-2">
+                                <div class="project-name text-xl font-semibold tracking-[2%]">Food Cort</div>
+                                <div class="project-category text-base tracking-[1.5%]">Apps Design</div>
+                            </div>
+                        </div>
+                        <div class="line flex items-center gap-4 gap-1 mt-2">
+                            <div class="number text-2xl -line w-[35px] h-[2px] bg-primary"></div>
+                            <div class="name-line flex-1 h-[1.6px] bg-gray-400"></div>
+                        </div>
+                        <div class="project-image w-full aspect-[3/3.8] mt-4 bg-gray-300"></div>
+                    </div>
+
+                    <div class="project-card flex-1 flex flex-col">
+                        <div class="project-number flex gap-6">
+                            <div class="number text-2xl font-semibold tracking-[12%]"><h4>03</h4></div>
+
+                            <div class="project-header flex flex-col mt-2">
+                                <div class="project-name text-xl font-semibold tracking-[2%]">Food Cort</div>
+                                <div class="project-category text-base tracking-[1.5%]">Apps Design</div>
+                            </div>
+                        </div>
+                        <div class="line flex items-center gap-4 gap-1 mt-2">
+                            <div class="number text-2xl -line w-[35px] h-[2px] bg-primary"></div>
+                            <div class="name-line flex-1 h-[1.6px] bg-gray-400"></div>
+                        </div>
+                        <div class="project-image w-full aspect-[3/3.8] mt-4 bg-gray-300"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LINE -->
+        <div class="line bg-surface py-[80px] px-[40px] lg:px-[120px]">
+            <hr class="flex-1 h-[2.5px] bg-gray-100">
+        </div>
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="experience-section px-[40px] lg:px-[120px] pb-[80px] bg-background bg-surface">
+            <div class="experience-container flex flex-col lg:flex-row gap-6 lg:gap-[60px]">
+
+                <div class="sertif-image w-full flex-2 w-full h-[400px] bg-gray-300">
+                    <img src="asset/sertifikat/SERTIF-EYTHO.jpg" alt="" class="w-full h-full object-cover">
+                </div>
+
+                <div class="line bg-surface ">
+                    <hr class="w-[1.7px] h-full bg-gray-300">
+                </div>
+
+                <div class="education-experience flex flex-2 flex-col gap-[24px]">
+                    <div class="section-title text-2xl font-semibold tracking-[18%]">
+                        EDUCATION & EXPERIENCE
+                    </div>
+
+                    <div class="experience-list flex flex-col gap-[20px]">
+
+                        <div class="experience-item flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor" d="m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775" />
+                            </svg>
+
+                            <div class="experience-content">
+                                <div class="experience-title text-base font-semibold tracking-[2.5%]">16 Mei 2023</div>
+                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Lulus dari SMK TI Bali Global Singaraja</div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor" d="M12 2c-4.41 0-8 3.59-8 8c0 2.52 1.17 4.77 3 6.24v4.77c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78l3.55 1.78a.997.997 0 0 0 1.45-.89v-4.76c1.83-1.47 3-3.72 3-6.24c0-4.41-3.59-8-8-8Zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6s6 2.69 6 6s-2.69 6-6 6" />
+                            </svg>
+
+                            <div class="experience-content">
+                                <div class="experience-title text-base font-semibold tracking-[2.5%]">Lomba Kompetensi Siswa Nasional</div>
+                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Medalion For Excellence (IT SOFTWARE SOLUTION FOR BUSINESS)</div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor" d="M12 2c-4.41 0-8 3.59-8 8c0 2.52 1.17 4.77 3 6.24v4.77c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78l3.55 1.78a.997.997 0 0 0 1.45-.89v-4.76c1.83-1.47 3-3.72 3-6.24c0-4.41-3.59-8-8-8Zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6s6 2.69 6 6s-2.69 6-6 6" />
+                            </svg>
+
+                            <div class="experience-content">
+                                <div class="experience-title text-base font-semibold tracking-[2.5%]">EYTHO Competition</div>
+                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Meraih juara 1 dalam kompetensi yang diadakan oleh EYTHO Elizabeth Tourism</div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="currentColor" d="M12 2c-4.41 0-8 3.59-8 8c0 2.52 1.17 4.77 3 6.24v4.77c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78l3.55 1.78a.997.997 0 0 0 1.45-.89v-4.76c1.83-1.47 3-3.72 3-6.24c0-4.41-3.59-8-8-8Zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6s6 2.69 6 6s-2.69 6-6 6" />
+                            </svg>
+
+                            <div class="experience-content">
+                                <div class="experience-title text-base font-semibold tracking-[2.5%]">Website Design</div>
+                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Meraih juara 2 dalam kompetensi website design</div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.5em" viewBox="0 0 24 24" class="mt-1 ml-1">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path fill="none" stroke="currentColor" stroke-width="2" d="M13 3v4zM9 3v4zM5 3v4zM1 7h22zm0 14h22V3H1z" />
+                            </svg>
+
+                            <div class="experience-content">
+                                <div class="experience-title text-base font-semibold tracking-[2.5%]">Information Website</div>
+                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Pembuatan website informasi untuk sebuah kegiatan desa</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section px-[40px] lg:px-[120px] py-[80px] bg-muted">
+            <div class="contact-container flex flex-col gap-[40px]">
+
+                <div class="contact-title">
+                    <div class="title-text text-[64px] tracking-[8%] font-semibold">
+                        LET’S CONNECT
+                    </div>
+                </div>
+
+                <div class="contact-content flex flex-col lg:flex-row gap-[80px]">
+
+                    <div class="contact-info w-[380px] flex flex-col justify-between text-secondtext font-semibold tracking-[2.5%]">
+
+                        <div class="contact-description text-base">
+                            Mari saling berkomunikasi untuk membangun project bersama
+                        </div>
+
+                        <div class="contact-detail flex flex-col gap-[13px]">
+                            <div class="contact-item flex flex-col gap-2 text-xs">
+                                <div class="icon flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                                        <path d="M0 0h36v36H0z" fill="none" />
+                                        <path fill="currentColor" d="M32 6H4a2 2 0 0 0-2 2v20a2 2 0 0 0 2 2h28a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2m-1.54 22H5.66l7-7.24l-1.44-1.39L4 26.84V9.52l12.43 12.37a2 2 0 0 0 2.82 0L32 9.21v17.5l-7.36-7.36l-1.41 1.41ZM5.31 8h25.07L17.84 20.47Z" class="clr-i-outline clr-i-outline-path-1" />
+                                        <path fill="none" d="M0 0h36v36H0z" />
+                                    </svg>
+
+                                    <div class="contact-label">Email</div>
+                                </div>
+                                <div class="contact-value text-base">sumitrayasa623@gmail.com</div>
+                            </div>
+
+                            <div class="contact-item flex flex-col gap-2 text-xs">
+                                <div class="icon flex items-center gap-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                                        <path d="M0 0h24v24H0z" fill="none" />
+                                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.554 6.24L7.171 2.335c-.39-.45-1.105-.448-1.558.006L2.831 5.128c-.828.829-1.065 2.06-.586 3.047a29.2 29.2 0 0 0 13.561 13.58c.986.479 2.216.242 3.044-.587l2.808-2.813c.455-.455.456-1.174.002-1.564l-3.92-3.365c-.41-.352-1.047-.306-1.458.106l-1.364 1.366a.46.46 0 0 1-.553.088a14.56 14.56 0 0 1-5.36-5.367a.46.46 0 0 1 .088-.554l1.36-1.361c.412-.414.457-1.054.101-1.465" />
+                                    </svg>
+
+                                    <div class="contact-label">Phone</div>
+                                </div>
+                                <div class="contact-value text-base">+62 81-338-657-414</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="contact-form w-full lg:w-[470px]">
+
+                        <form class="form-container flex flex-col gap-[24px]">
+
+                            <div class="form-row flex flex-col lg:flex-row gap-[24px]">
+
+                                <div class="form-group w-full">
+                                    <input type="text" name="name" class="form-input w-full bg-muted" placeholder="Nama">
+                                    <hr class="form-input-underline w-full h-[2px] bg-gray-800 mt-2">
+                                </div>
+
+                                <div class="form-group w-full">
+                                    <input type="email" name="email" class="form-input w-full bg-muted" placeholder="Email">
+                                    <hr class="form-input-underline w-full h-[2px] bg-gray-800 mt-2">
+                                </div>
+
+                            </div>
+
+                            <div class="form-group form-description w-full">
+                                <textarea name="description" class="form-textarea w-full h-[100px] bg-muted" placeholder="Tulis pesan Anda di sini..."></textarea>
+                                <hr class="form-input-underline w-full h-[3px] bg-gray-800 mt-2">
+                            </div>
+
+                            <button type="submit" class="form-button bg-black text-white py-2">
+                                Kirim Pesan
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                    <div class="line bg-surface ">
+                        <hr class="w-[1.7px] h-full bg-gray-800">
+                    </div>
+
+                    <div class="social-media flex flex-col flex-1 gap-4">
+
+                        <a href="#" class="social-item flex items-center gap-3">
+                            <div class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" viewBox="0 0 24 24" class="ml-[1px]">
+                                    <path d="M0 0h24v24H0z" fill="none" />
+                                    <g fill="none">
+                                        <g clip-path="url(#SVGXv8lpc2Y)">
+                                            <path fill="currentColor" fill-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385c.6.105.825-.255.825-.57c0-.285-.015-1.23-.015-2.235c-3.015.555-3.795-.735-4.035-1.41c-.135-.345-.72-1.41-1.23-1.695c-.42-.225-1.02-.78-.015-.795c.945-.015 1.62.87 1.845 1.23c1.08 1.815 2.805 1.305 3.495.99c.105-.78.42-1.305.765-1.605c-2.67-.3-5.46-1.335-5.46-5.925c0-1.305.465-2.385 1.23-3.225c-.12-.3-.54-1.53.12-3.18c0 0 1.005-.315 3.3 1.23c.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23c.66 1.65.24 2.88.12 3.18c.765.84 1.23 1.905 1.23 3.225c0 4.605-2.805 5.625-5.475 5.925c.435.375.81 1.095.81 2.22c0 1.605-.015 2.895-.015 3.3c0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12" clip-rule="evenodd" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="SVGXv8lpc2Y">
+                                                <path fill="#fff" d="M0 0h24v24H0z" />
+                                            </clipPath>
+                                        </defs>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="social-name font-semibold">@sumi_tra</div>
+                        </a>
+
+                        <a href="#" class="social-item flex gap-3">
+                            <div class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 1024 1024">
+                                    <path d="M0 0h1024v1024H0z" fill="none" />
+                                    <path fill="currentColor" d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3S645.3 585.4 645.3 512S585.4 378.7 512 378.7M911.8 512c0-55.2.5-109.9-2.6-165c-3.1-64-17.7-120.8-64.5-167.6c-46.9-46.9-103.6-61.4-167.6-64.5c-55.2-3.1-109.9-2.6-165-2.6c-55.2 0-109.9-.5-165 2.6c-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6c46.9 46.9 103.6 61.4 167.6 64.5c55.2 3.1 109.9 2.6 165 2.6c55.2 0 109.9.5 165-2.6c64-3.1 120.8-17.7 167.6-64.5c46.9-46.9 61.4-103.6 64.5-167.6c3.2-55.1 2.6-109.8 2.6-165M512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9S717.1 398.5 717.1 512S625.5 717.1 512 717.1m213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9s47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9" />
+                                </svg>
+                            </div>
+                            <div class="social-name font-semibold">@sumi_tra</div>
+                        </a>
+
+                        <a href="#" class="social-item flex gap-3">
+                            <div class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.8em" height="1.8em" viewBox="0 0 1024 1024">
+                                    <path d="M0 0h1024v1024H0z" fill="none" />
+                                    <path fill="currentColor" d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32m-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6c44.2 0 82.1 3.3 93.2 4.8v107.9z" />
+                                </svg>
+                            </div>
+                            <div class="social-name font-semibold">@sumi_tra</div>
+                        </a>
+
+                        <a href="#" class="social-item flex gap-3">
+                            <div class="social-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.6em" height="1.6em" viewBox="0 0 32 32">
+                                    <path d="M0 0h32v32H0z" fill="none" />
+                                    <path fill="currentColor" d="M16.708.027C18.453 0 20.188.016 21.921 0c.105 2.041.839 4.12 2.333 5.563c1.491 1.479 3.6 2.156 5.652 2.385v5.369c-1.923-.063-3.855-.463-5.6-1.291c-.76-.344-1.468-.787-2.161-1.24c-.009 3.896.016 7.787-.025 11.667c-.104 1.864-.719 3.719-1.803 5.255c-1.744 2.557-4.771 4.224-7.88 4.276c-1.907.109-3.812-.411-5.437-1.369C4.307 29.027 2.412 26.12 2.136 23a22 22 0 0 1-.016-1.984c.24-2.537 1.495-4.964 3.443-6.615c2.208-1.923 5.301-2.839 8.197-2.297c.027 1.975-.052 3.948-.052 5.923c-1.323-.428-2.869-.308-4.025.495a4.62 4.62 0 0 0-1.819 2.333c-.276.676-.197 1.427-.181 2.145c.317 2.188 2.421 4.027 4.667 3.828c1.489-.016 2.916-.88 3.692-2.145c.251-.443.532-.896.547-1.417c.131-2.385.079-4.76.095-7.145c.011-5.375-.016-10.735.025-16.093z" />
+                                </svg>
+
+                            </div>
+                            <div class="social-name font-semibold">@sumi_tra</div>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+</body>
+
+</html>

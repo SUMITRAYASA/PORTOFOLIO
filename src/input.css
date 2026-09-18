@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+    /* =========================
+       COLORS
+       ========================= */
+    --color-primary: #00756B;
+    --color-second-primary: #114540;
+    --color-background: #F9F9F9;
+    --color-line: #878787;
+    --color-surface: #F4F4F4;
+    --color-muted: #EDEDED;
+    --color-bg-primary-transparant: #EAF3F3;
+
+    --color-text: #000000;
+    --color-secondtext: #4D4D4D;
+    --color-thirdtext: #878787;
+
+
+    /* =========================
+       FONTS
+       ========================= */
+    --font-khula: "Khula", sans-serif;
+    --font-bebas: "Bebas Neue", sans-serif;
+    --font-kenia: "Kenia", sans-serif;
+}
