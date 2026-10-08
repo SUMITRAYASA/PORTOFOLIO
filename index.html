@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Potofolio</title>    
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kenia&family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <link href="src/output.css" rel="stylesheet">
 
     <!-- Font -->
     <script>
@@ -28,44 +27,71 @@
         }
     </script>
 
-    <!-- Color -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#00756B',
-                        background: '#FFFFFF',
-                        line: '878787',
-                        surface: '#F4F4F4',
-                        muted: '#EDEDED',
-                        text: '#000000',
-                        secondtext: '#4d4d4d',
-                        thirdtext: '#878787',
-                    }
-                }
+    <style type="text/tailwindcss">
+        @theme {
+            --color-background: #000000;
+            --color-backgroundsc: #1D1D1D;
+            --color-primary: #00D5C4;
+            --color-normal: #FFFFFF;
+            --color-secondary: #D5D5D5;
+            --color-hr: #8F8F8F;
+
+            --font-khula: 'Khula', sans-serif;
+            --font-bebas: 'Bebas Neue', sans-serif;
+            --font-kenia: 'Kenia', sans-serif;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        h3 {
+            font-family: 'Kenia', sans-serif;
+        }
+
+        .contents-corousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .contents {
+            display: flex;
+            width: max-content;
+            gap: 60px;
+            animation: carousel 20s linear infinite;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        @keyframes carousel {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
             }
         }
-    </script>
-
-    <style>
-    h1 {
-        font-family: 'Bebas Neue', sans-serif;
-    }
-
-    h3 {
-        font-family: 'Kenia', sans-serif;
-    }
-</style>
+    </style>
 </head>
-
-<body class="font-khula relative">
-
+<body class="bg-background text-normal font-khula">
     <header>
-        <nav id="navbar" class="navbar hidden lg:sticky lg:block bg-background lg:w-full lg:flex px-[120px] py-[20px] lg:items-center lg:justify-between">
+        <nav class="navbar hidden lg:block lg:flex lg:justify-between lg:items-center lg:px-30 py-7 px-6">
             <div class="navbar-logo flex gap-2 items-center ">
                 <div class="logo-icon text-4xl">
-                    <h3>S</h3>
+                    
                 </div>
                 <p class="logo-name font-semibold">
                     Sumitra
@@ -88,10 +114,8 @@
     </header>
 
     <main>
-        <!-- HERO -->
-        <section id="hero" class="hero-section px-[40px] lg:px-[120px] pt-[40px] pb-[40px] lg-pt-[40px] bg-background">
-
-            <div class="hero-top flex justify-between items-center text-secondtext text-sm">
+        <section id="hero" class="hero-section flex flex-col px-6 py-10 lg:px-30 lg:py-0 lg:pt-8 lg:pb-0 gap-10 lg:gap-0">
+            <div class="hero-top flex justify-between items-center text-secondtext text-sm ">
 
                 <div class="profile-label">
                     <p class="profile-name tracking-[5%] text-base">Let's</p>
@@ -99,15 +123,15 @@
                 </div>
 
                 <div class="portfolio-label text-xs flex flex-col">
-                    <p class="portfolio-title text-right tracking-[5%]">PORTOFOLIO</p>
-                    <p class="portfolio-year text-right tracking-[5%] text-base">2026</p>
+                    <p class="portfolio-title text-right tracking-[5%] text-base">2+ years</p>
+                    <p class="portfolio-year text-right tracking-[5%]">Experiences</p>
                 </div>
 
             </div>
 
-            <div class="hero-content flex flex-col-reverse lg:flex-row px-[30px]">
+            <div class="hero-content flex flex-col-reverse lg:flex-row px-3 lg:px-8">
 
-                <div class="hero-introduction flex flex-1 flex-col gap-6 lg:gap-[80px] mt-[70px]">
+                <div class="hero-introduction flex flex-1 flex-col gap-6 lg:gap-13 mt-10 lg:mt-18">
 
                     <div class="hero-header flex flex-col gap-3">
                         <div class="hero-name text-[100px] lg:text-[172px] lg:tracking-[-2%] leading-[80px] lg:leading-[128px] ">
@@ -122,7 +146,7 @@
 
 
 
-                    <div class="hero-description w-full lg:w-[65%] text-secondtext tracking-[10%] lg:tracking-[5%] text-base">
+                    <div class="hero-description w-full lg:w-[65%] text-secondtext tracking-[10%] text-base">
                         Aku seorang pelajar yang terus berkembang melalui proses belajar dan berkarya untuk menciptakan program yang bermanfaat.
                     </div>
 
@@ -130,186 +154,199 @@
 
                 <div class="hero-visual flex-1">
 
-                    <div class="hero-image">
-                        <img src="asset/profil-hero.png" alt="Putu Sumitrayasa">
+                    <div class="hero-image relative">
+
+                        <img src="asset/gambar/profil-hero.png"alt="Putu Sumitrayasa"class="w-full">
+                        <!-- Gradient overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent/50 to-background"></div>
+
                     </div>
 
                 </div>
 
             </div>
-
         </section>
+        <section class="corousel-tools-section flex flex-col px-6 py-10 lg:px-30 lg:py-0 lg:pb-10 gap-10">
 
-        <!-- PORJECT -->
-        <section id="portfolio" class="portfolio-section px-[40px] lg:px-[120px] pt-[80px] bg-surface">
-            <div class="portfolio-container w-full flex flex-col lg:flex-row gap-[80px]">
+            <div class="header">
+                <p class="text-base font-semibold text-secondary tracking-[5%]">
+                    Tools Design
+                </p>
 
-                <div class="selected-project w-full lg:w-[20%] flex flex-col justify-between">
-                    <div class="project-text flex flex-col gap-6">
-                        <div class="section-title text-2xl font-semibold tracking-[12%]">
-                            <h4>SELECTED<br>PROJECT</h4>
-                        </div>
+                <hr class="mt-2 h-0.5 border-0 bg-secondary/30">
+            </div>
 
-                        <div class="project-description text-base text-secondtext font-semibold tracking-[2.5%]">
-                            Semua project yang pernah aku buat ada disini, pembuatan website, design, dst
-                        </div>
+            <!-- Carousel -->
+            <div class="contents-corousel relative overflow-hidden py-10 lg:py-30">
+
+                <div class="absolute left-0 top-0 bottom-0 w-10 lg:w-100 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none"></div>
+
+                <!-- Track -->
+                <div class="contents">
+
+                    <!-- SET 1 -->
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>Figma</h2>
                     </div>
 
-                    <a href="#" class="project-link text-primary font-semibold flex items-center gap-3 tracking-[0.02rem]">
-                        <span>Lihat semua project ku</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
-                            <path d="M0 0h24v24H0z" fill="none" />
-                            <path fill="currentColor" d="M13.47 8.53a.75.75 0 0 1 1.06-1.06l4 4a.75.75 0 0 1 0 1.06l-4 4a.75.75 0 1 1-1.06-1.06l2.72-2.72H6.5a.75.75 0 0 1 0-1.5h9.69z" />
-                        </svg>
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>VS Code</h2>
+                    </div>
 
-                    </a>
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>HTML</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>CSS</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>React</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>Tailwind</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>Javascript</h2>
+                    </div>
+
+
+                    <!-- SET 2 — DUPLIKAT -->
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>Figma</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>VS Code</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>HTML</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>CSS</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>React</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>Tailwind</h2>
+                    </div>
+
+                    <div class="content">
+                        <div class="icon"></div>
+                        <h2>Javascript</h2>
+                    </div>
+
                 </div>
 
-                <div class="project-list flex-1 flex flex-col lg:flex-row gap-[42px]">
+                <div class="absolute right-0 top-0 bottom-0 w-10 lg:w-100 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none"></div>
 
-                    <div class="project-card flex-1 flex flex-col">
-                        <div class="project-number flex gap-6">
-                            <div class="number text-2xl font-semibold tracking-[12%]"><h4>01</h4></div>
+            </div>
+        </section>
+        <section id="projects" class="projects-section flex flex-col px-6 py-0 lg:px-30 gap-15">
+            <div class="header">
+                <p class="text-base font-semibold text-secondary tracking-[5%]">
+                    My Projects
+                </p>
 
-                            <div class="project-header flex flex-col mt-2">
-                                <div class="project-name text-xl font-semibold tracking-[2%]">Food Cort</div>
-                                <div class="project-category text-base tracking-[1.5%]">Apps Design</div>
+                <hr class="mt-2 h-0.5 border-0 bg-secondary/30">
+            </div>
+
+            <div class="projects flex flex-col gap-10 lg:gap-40">
+
+                <div class="project flex flex-col-reverse lg:flex-row gap-10 lg:gap-60">
+                    <div class="project-information flex flex-col gap-5 lg:justify-between">
+                        <div class="information">
+                            <div class="header flex flex-col gap-2">
+                                <h5 class="text-3xl font-bold">LELEKU</h5>
+
+                                <p class="text-xl text-secondary">
+                                    Program pencatatan peternakan lele untuk Badan Usaha Milik Desa
+                                </p>
+                            </div>
+
+                            <div class="category category flex flex-wrap gap-4 mt-6">
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">Website Development</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">React</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">HTML</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">UI/UX</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">Tailwind</span>
                             </div>
                         </div>
-                        <div class="line flex items-center gap-4 gap-1 mt-2">
-                            <div class="number text-2xl -line w-[35px] h-[2px] bg-primary"></div>
-                            <div class="name-line flex-1 h-[1.6px] bg-gray-400"></div>
-                        </div>
-                        <div class="project-image w-full aspect-[3/3.8] mt-4 bg-gray-300">
-                            <img src="asset/project/Sampul-lomba.png" alt="">
+
+                        <div class="action">
+                            <a href="#" class="text-primary text-xl">
+                                Lihat project
+                                <span>→</span>
+                            </a>
                         </div>
                     </div>
-                    
-                    <button class="cursor-pointer project-card flex-1 flex flex-col">
-                        <a href="kalkulator.html">
-                            <div class="project-number flex gap-6">
-                                <div class="number text-2xl font-semibold tracking-[12%]"><h4>02</h4></div>
 
-                                <div class="project-header flex flex-col mt-2">
-                                    <div class="project-name text-xl font-semibold tracking-[2%]">Kalkulator</div>
-                                    <div class="project-category text-base tracking-[1.5%]">Website Design</div>
-                                </div>
-                            </div>
-                            <div class="line flex items-center gap-4 gap-1 mt-2">
-                                <div class="number text-2xl -line w-[35px] h-[2px] bg-primary"></div>
-                                <div class="name-line flex-1 h-[1.6px] bg-gray-400"></div>
-                            </div>
-                            <div class="project-image w-full aspect-[3/3.8] mt-4 bg-gray-300">
-                                <img src="asset/project/Sampul-kalkulator.png" alt="" class="w-full h-full object-cover">
+                    <!-- PROJECT VISUAL -->
+                    <div class="project-visual w-full lg:w-[60%] mt-10 lg:mt-0">
+                        <a href="">
+                            <div class="relative w-full aspect-video overflow-hidden bg-surface">
+                                <img src="asset/gambar/LELEKU.png" alt="Preview website LELEKU" class="w-full h-full object-cover" >
                             </div>
                         </a>
-                    </button>
+                    </div>
+                </div>
 
-                    <div class="project-card flex-1 flex flex-col">
-                        <div class="project-number flex gap-6">
-                            <div class="number text-2xl font-semibold tracking-[12%]"><h4>03</h4></div>
+                <div class="project flex flex-col-reverse lg:flex-row gap-10 lg:gap-60">
+                    <div class="project-information flex flex-col gap-5 lg:justify-between">
+                        <div class="information">
+                            <div class="header flex flex-col gap-2">
+                                <h5 class="text-3xl font-bold">LELEKU</h5>
 
-                            <div class="project-header flex flex-col mt-2">
-                                <div class="project-name text-xl font-semibold tracking-[2%]">Food Cort</div>
-                                <div class="project-category text-base tracking-[1.5%]">Apps Design</div>
+                                <p class="text-xl text-secondary">
+                                    Program pencatatan peternakan lele untuk Badan Usaha Milik Desa
+                                </p>
+                            </div>
+
+                            <div class="category category flex flex-wrap gap-4 mt-6">
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">Website Development</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">React</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">HTML</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">UI/UX</span>
+                                <span class="px-4 py-2 bg-backgroundsc text-white text-xl font-medium">Tailwind</span>
                             </div>
                         </div>
-                        <div class="line flex items-center gap-4 gap-1 mt-2">
-                            <div class="number text-2xl -line w-[35px] h-[2px] bg-primary"></div>
-                            <div class="name-line flex-1 h-[1.6px] bg-gray-400"></div>
+
+                        <div class="action">
+                            <a href="#" class="text-primary text-xl">
+                                Lihat project
+                                <span>→</span>
+                            </a>
                         </div>
-                        <div class="project-image w-full aspect-[3/3.8] mt-4 bg-gray-300"></div>
                     </div>
 
-                </div>
-
-            </div>
-        </section>
-
-        <!-- LINE -->
-        <div class="line bg-surface py-[80px] px-[40px] lg:px-[120px]">
-            <hr class="flex-1 h-[2.5px] bg-gray-100">
-        </div>
-
-        <!-- EXPERIENCE -->
-        <section id="experience" class="experience-section px-[40px] lg:px-[120px] pb-[80px] bg-background bg-surface">
-            <div class="experience-container flex flex-col lg:flex-row gap-6 lg:gap-[60px]">
-
-                <div class="sertif-image w-full flex-2 w-full h-[400px] bg-gray-300">
-                    <img src="asset/sertifikat/SERTIF-EYTHO.jpg" alt="" class="w-full h-full object-cover">
-                </div>
-
-                <div class="line bg-surface ">
-                    <hr class="w-[1.7px] h-full bg-gray-300">
-                </div>
-
-                <div class="education-experience flex flex-2 flex-col gap-[24px]">
-                    <div class="section-title text-2xl font-semibold tracking-[18%]">
-                        EDUCATION & EXPERIENCE
-                    </div>
-
-                    <div class="experience-list flex flex-col gap-[20px]">
-
-                        <div class="experience-item flex gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path fill="currentColor" d="m12 21l-7-3.8v-6L1 9l11-6l11 6v8h-2v-6.9l-2 1.1v6zm0-8.3L18.85 9L12 5.3L5.15 9zm0 6.025l5-2.7V12.25L12 15l-5-2.75v3.775zm0-3.775" />
-                            </svg>
-
-                            <div class="experience-content">
-                                <div class="experience-title text-base font-semibold tracking-[2.5%]">16 Mei 2023</div>
-                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Lulus dari SMK TI Bali Global Singaraja</div>
+                    <!-- PROJECT VISUAL -->
+                    <div class="project-visual w-full lg:w-[60%] mt-10 lg:mt-0">
+                        <a href="">
+                            <div class="relative w-full aspect-video overflow-hidden bg-surface">
+                                <img src="asset/gambar/LELEKU.png" alt="Preview website LELEKU" class="w-full h-full object-cover" >
                             </div>
-                        </div>
-
-                        <div class="experience-item flex gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path fill="currentColor" d="M12 2c-4.41 0-8 3.59-8 8c0 2.52 1.17 4.77 3 6.24v4.77c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78l3.55 1.78a.997.997 0 0 0 1.45-.89v-4.76c1.83-1.47 3-3.72 3-6.24c0-4.41-3.59-8-8-8Zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6s6 2.69 6 6s-2.69 6-6 6" />
-                            </svg>
-
-                            <div class="experience-content">
-                                <div class="experience-title text-base font-semibold tracking-[2.5%]">Lomba Kompetensi Siswa Nasional</div>
-                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Medalion For Excellence (IT SOFTWARE SOLUTION FOR BUSINESS)</div>
-                            </div>
-                        </div>
-
-                        <div class="experience-item flex gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path fill="currentColor" d="M12 2c-4.41 0-8 3.59-8 8c0 2.52 1.17 4.77 3 6.24v4.77c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78l3.55 1.78a.997.997 0 0 0 1.45-.89v-4.76c1.83-1.47 3-3.72 3-6.24c0-4.41-3.59-8-8-8Zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6s6 2.69 6 6s-2.69 6-6 6" />
-                            </svg>
-
-                            <div class="experience-content">
-                                <div class="experience-title text-base font-semibold tracking-[2.5%]">EYTHO Competition</div>
-                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Meraih juara 1 dalam kompetensi yang diadakan oleh EYTHO Elizabeth Tourism</div>
-                            </div>
-                        </div>
-
-                        <div class="experience-item flex gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.5em" viewBox="0 0 24 24" class="mt-1">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path fill="currentColor" d="M12 2c-4.41 0-8 3.59-8 8c0 2.52 1.17 4.77 3 6.24v4.77c0 .35.18.67.47.85s.66.2.97.04l3.55-1.78l3.55 1.78a.997.997 0 0 0 1.45-.89v-4.76c1.83-1.47 3-3.72 3-6.24c0-4.41-3.59-8-8-8Zm0 14c-3.31 0-6-2.69-6-6s2.69-6 6-6s6 2.69 6 6s-2.69 6-6 6" />
-                            </svg>
-
-                            <div class="experience-content">
-                                <div class="experience-title text-base font-semibold tracking-[2.5%]">Website Design</div>
-                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Meraih juara 2 dalam kompetensi website design</div>
-                            </div>
-                        </div>
-
-                        <div class="experience-item flex gap-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.5em" viewBox="0 0 24 24" class="mt-1 ml-1">
-                                <path d="M0 0h24v24H0z" fill="none" />
-                                <path fill="none" stroke="currentColor" stroke-width="2" d="M13 3v4zM9 3v4zM5 3v4zM1 7h22zm0 14h22V3H1z" />
-                            </svg>
-
-                            <div class="experience-content">
-                                <div class="experience-title text-base font-semibold tracking-[2.5%]">Information Website</div>
-                                <div class="experience-description text-sm font-semibold tracking-[2.5%] text-thirdtext ">Pembuatan website informasi untuk sebuah kegiatan desa</div>
-                            </div>
-                        </div>
-
+                        </a>
                     </div>
                 </div>
 
@@ -317,8 +354,8 @@
         </section>
 
         <!-- CONTACT -->
-        <section id="contact" class="contact-section px-[40px] lg:px-[120px] py-[80px] bg-muted">
-            <div class="contact-container flex flex-col gap-[40px]">
+        <section id="contact" class="contact-section px-6 lg:px-30 py-20 lg:py-40 bg-muted">
+            <div class="contact-container flex flex-col gap-4">
 
                 <div class="contact-title">
                     <div class="title-text text-[64px] tracking-[8%] font-semibold">
@@ -328,7 +365,7 @@
 
                 <div class="contact-content flex flex-col lg:flex-row gap-[80px]">
 
-                    <div class="contact-info w-[380px] flex flex-col justify-between text-secondtext font-semibold tracking-[2.5%]">
+                    <div class="contact-info w-full lg:w-[380px] gap-6 flex flex-col justify-between text-secondtext font-semibold tracking-[2.5%]">
 
                         <div class="contact-description text-base">
                             Mari saling berkomunikasi untuk membangun project bersama
@@ -458,9 +495,20 @@
         </section>
     </main>
 
-    <footer>
-    </footer>
+    <script src="https://unpkg.com/lenis@1.3.4/dist/lenis.min.js"></script>
 
+    <script>
+        const lenis = new Lenis({
+            duration: 1.5,
+            smoothWheel: true
+        })
+
+        function raf(time) {
+            lenis.raf(time)
+            requestAnimationFrame(raf)
+        }
+
+        requestAnimationFrame(raf)
+    </script>
 </body>
-
 </html>
